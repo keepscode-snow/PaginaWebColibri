@@ -1,0 +1,136 @@
+.dashboard {
+  display: grid;
+  gap: 24px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.kpiCard {
+  border-radius: 24px;
+  padding: 24px;
+  color: var(--white);
+  display: grid;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kpiCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.35), transparent 60%);
+  opacity: 0.7;
+}
+
+.kpiTitle {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.kpiValue {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.kpiDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.rose {
+  background: linear-gradient(135deg, #f472b6, #fbcfe8);
+}
+
+.mint {
+  background: linear-gradient(135deg, #34d399, #a7f3d0);
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.panel {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 18px;
+}
+
+.panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel h3 {
+  margin: 0;
+}
+
+.tag {
+  background: var(--rose-100);
+  color: var(--rose-400);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.orderItem,
+.productItem {
+  background: var(--rose-50);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.orderItem h4,
+.productItem h4 {
+  margin: 0 0 4px;
+}
+
+.orderItem p,
+.productItem p {
+  margin: 0;
+  color: var(--gray-500);
+}
+
+.orderMeta {
+  text-align: right;
+  font-weight: 600;
+  display: grid;
+  gap: 6px;
+}
+
+.badge {
+  background: var(--mint-100);
+  color: var(--gray-700);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.empty {
+  margin: 0;
+  color: var(--gray-500);
+  text-align: center;
+}

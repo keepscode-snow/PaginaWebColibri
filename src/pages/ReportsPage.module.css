@@ -1,0 +1,167 @@
+.reports {
+  display: grid;
+  gap: 24px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.kpiCard {
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.9), rgba(16, 185, 129, 0.8));
+  border-radius: 24px;
+  padding: 24px;
+  color: var(--white);
+  display: grid;
+  gap: 6px;
+  box-shadow: var(--shadow-soft);
+}
+
+.kpiTitle {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+}
+
+.kpiValue {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.kpiDetail {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.chartSection,
+.tables article {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 16px;
+}
+
+.chartSection header,
+.tables article header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.chartSection h3,
+.tables h4 {
+  margin: 0;
+}
+
+.chartSection p {
+  margin: 4px 0 0;
+  color: var(--gray-500);
+}
+
+.dateFilters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dateFilters label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.dateFilters input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(244, 114, 182, 0.25);
+  background: var(--rose-50);
+}
+
+.chartWrapper {
+  min-height: 320px;
+}
+
+.empty {
+  margin: 0;
+  color: var(--gray-500);
+  text-align: center;
+}
+
+.tables {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.tables button {
+  border: none;
+  background: var(--mint-200);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--gray-700);
+}
+
+.tableWrapper {
+  max-height: 260px;
+  overflow: auto;
+}
+
+.tableWrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(244, 114, 182, 0.1);
+  font-size: 0.95rem;
+}
+
+th {
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.emptyCell {
+  text-align: center;
+  color: var(--gray-500);
+  padding: 24px 0;
+}
+
+.statusTag {
+  padding: 6px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.pending {
+  background: rgba(244, 114, 182, 0.2);
+  color: var(--rose-400);
+}
+
+.delivered {
+  background: rgba(16, 185, 129, 0.2);
+  color: #047857;
+}
+
+@media (max-width: 768px) {
+  .tables {
+    grid-template-columns: 1fr;
+  }
+}
