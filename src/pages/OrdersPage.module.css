@@ -1,0 +1,179 @@
+.orders {
+  display: grid;
+  gap: 24px;
+}
+
+.formSection,
+.listSection {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 18px;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(244, 114, 182, 0.25);
+  background: var(--rose-50);
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type='submit'] {
+  background: var(--rose-600);
+  border: none;
+  padding: 14px 20px;
+  border-radius: 16px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  justify-self: start;
+  box-shadow: 0 14px 28px rgba(219, 39, 119, 0.28);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+button[type='submit']:hover,
+button[type='submit']:focus-visible {
+  background: var(--rose-500);
+  box-shadow: 0 16px 32px rgba(219, 39, 119, 0.32);
+  transform: translateY(-1px);
+}
+
+button[type='submit']:focus-visible {
+  outline: 3px solid rgba(236, 72, 153, 0.35);
+  outline-offset: 2px;
+}
+
+.feedback {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.success {
+  background: rgba(16, 185, 129, 0.18);
+  color: #047857;
+}
+
+.error {
+  background: rgba(248, 113, 113, 0.2);
+  color: #b91c1c;
+}
+
+.listSection header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.listSection p {
+  margin: 4px 0 0;
+  color: var(--gray-500);
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+  background: var(--mint-50);
+}
+
+.orderList {
+  display: grid;
+  gap: 16px;
+}
+
+.orderCard {
+  background: var(--rose-50);
+  border-radius: 20px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.orderCard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderCard h4 {
+  margin: 0;
+}
+
+.orderCard span {
+  color: var(--gray-500);
+}
+
+.status {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.pending {
+  background: rgba(244, 114, 182, 0.2);
+  color: var(--rose-400);
+}
+
+.delivered {
+  background: rgba(16, 185, 129, 0.18);
+  color: #047857;
+}
+
+.orderCard footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.orderCard footer strong {
+  display: block;
+  color: var(--gray-700);
+}
+
+.empty {
+  margin: 0;
+  text-align: center;
+  color: var(--gray-500);
+}
+
+@media (max-width: 768px) {
+  .listSection header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
